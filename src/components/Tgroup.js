@@ -22,7 +22,11 @@ class Slide extends Component{
     }
 
     removeNumber(){
-      
+      let newArray = this.state.items.slice(0, -1);
+
+      this.setState({
+          items: newArray
+      })
     }
 
     render(){
