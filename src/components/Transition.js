@@ -17,7 +17,19 @@ class TransitionComp extends Component {
   render() {
     return (
       <>
-        <Transition in={this.state.show} timeout={1000}>
+        <Transition in={this.state.show} timeout={1000}
+
+           enter={false}
+           exit={false}
+           
+           onEnter={ ()=> {
+               console.log('ENTER')
+           }}
+
+           onExit={ ()=> {
+            console.log('EXIT')
+        }}
+        >
           {(state) => (
             <div className={`square square-${state}`}>
               {`square square-${state}`}
