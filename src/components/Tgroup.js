@@ -6,8 +6,10 @@ class Slide extends Component{
         items:[]
     }
     
-    addElements () {
-      
+    showElements () {
+      return this.state.items.map((item, i)=> (
+      <div className="item" key={i}>{item}</div>
+      ))
     }
 
     generateNumber(){
@@ -32,7 +34,7 @@ class Slide extends Component{
     render(){
         return(
             <div>
-                {this.addElements()}
+                {this.showElements()}
              
                 <div className="btns">
                     <div className="btn-add" onClick={()=> this.generateNumber()}>Add Elements</div>
