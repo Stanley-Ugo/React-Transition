@@ -14,6 +14,9 @@ class Slide extends Component {
         className="item"
         timeout={500}
         key={i}
+        onEntered={(node)=> {
+            node.classList.add('active')
+        }}
       >
         <div className="item" >
           {item}
