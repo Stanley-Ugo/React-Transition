@@ -12,7 +12,7 @@ class Slide extends Component {
     return this.state.items.map((item, i) => (
       <CSSTransition
         className="item"
-        timeout={500}
+        timeout={200}
         key={i}
         onEntered={(node)=> {
             node.classList.add('active')
